@@ -1,0 +1,45 @@
+<?php
+
+namespace IDGdashboard\Libraries;
+/*
+ * File: CRUDBuilder.php
+ * Project: Libraries
+ * Created Date: Mo Dec 2021
+ * Author: Ayatulloh Ahad R
+ * Email: ayatulloh@indiega.net
+ * Phone: 085791555506
+ * -----
+ * Last Modified: Mon Dec 06 2021
+ * Modified By: Ayatulloh Ahad R
+ * -----
+ * Copyright (c) 2021 Indiega Network
+ * -----
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	---------------------------------------------------------
+ */
+
+class CRUDBuilder extends GroceryCrud
+{
+    /**
+     * mode use: read | all
+     */
+    public $mode = 'read';
+
+    private function modeRead()
+    {
+        $this->unsetAdd();
+        $this->unsetEdit();
+        $this->unsetDelete();
+        $this->unsetRead();
+    }
+
+    public function renderHTML()
+    {
+
+        if ($this->mode == 'read') $this->modeRead();
+
+        $this->unsetJquery();
+        return $this->render();
+    }
+}

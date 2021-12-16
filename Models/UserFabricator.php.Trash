@@ -1,0 +1,18 @@
+<?php 
+namespace IDGdashboard\Models;
+
+use CodeIgniter\Test\Fabricator;
+
+class UserFabricator extends User
+{
+    public function fake(&$faker)
+    {
+
+        
+
+        $fabricator = new Fabricator(UserFabricator::class);
+        // return $users = $fabricator->create(10); // to insert database
+        return $users = $fabricator->make(10); // to dump output
+    
+    }
+}

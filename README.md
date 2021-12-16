@@ -9,3 +9,17 @@ composer config repositories.IDGdashboard vcs git@github.com:ay4t/ci4-dashboard.
 ```
 composer require ay4t/ci4-dashboard
 ```
+
+#make migration
+```
+php spark migrate -n IDGdashboard
+```
+
+#seed to database
+```
+php spark db:seed
+```
+
+```
+\IDGdashboard\Database\Seeds\SettingsSeeder
+```

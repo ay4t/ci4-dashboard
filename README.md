@@ -21,5 +21,5 @@ php spark db:seed
 ```
 
 ```
-\IDGdashboard\Database\Seeds\SettingsSeeder
+\IDGdashboard\Database\Seeds\DatabaseSeeder
 ```
